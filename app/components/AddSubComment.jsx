@@ -7,13 +7,14 @@ export class AddSubComment extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    var {dispatch, parentID} = this.props
+    var {dispatch, parentID, id} = this.props
     //console.log('PARENT_ID: ', parentID);
 
     var text = this.refs.text.value;
 
     if (text.length > 0) {
       this.refs.text.value = '';
+      dispatch(actions.toggleCommentForm(parentID));
       dispatch(actions.createSubComment(text, parentID))
       // dispatch(actions.addItem(itemText));
       // dispatch(actions.openPostCommentForm());

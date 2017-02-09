@@ -21,19 +21,21 @@ export class Item extends React.Component {
   //   dispatch(actions.toggleEditable(id));
   // }
 
-  handleUpdateSubmit (e) {
-    e.preventDefault();
-    var {dispatch, id} = this.props
-
-    var itemText = this.refs.itemText.value;
-
-    if (itemText.length > 0) {
-      dispatch(actions.editText(id, itemText));
-      dispatch(actions.toggleEditable(id));
-    } else {
-      this.refs.itemText.focus();
-    }
-  }
+  // handleUpdateSubmit (e) {
+  //   e.preventDefault();
+  //   var {dispatch, id} = this.props
+  // 
+  //   var itemText = this.refs.itemText.value;
+  //
+  //   if (itemText.length > 0) {
+  //     // dispatch(actions.editText(id, itemText));
+  //     // dispatch(actions.toggleEditable(id));
+  //     dispatch(actions.toggleCommentForm(id));
+  //
+  //   } else {
+  //     this.refs.itemText.focus();
+  //   }
+  // }
 
   render() {
     var {text, addCommentForm, id} = this.props;
