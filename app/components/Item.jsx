@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import moment from 'moment';
 import * as actions from 'actions';
 import AddSubComment from 'AddSubComment';
+import SubCommentList from 'SubCommentList';
 
 
 export class Item extends React.Component {
@@ -45,7 +46,7 @@ export class Item extends React.Component {
                 <p>username</p>
                 <p>{text}</p>
               </div>
-
+              <SubCommentList parentID={id}/>
               <AddSubComment parentID={id}/>
               <div className="deleteBox">
                 <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
@@ -62,6 +63,7 @@ export class Item extends React.Component {
                 <p>{text}</p>
               </div>
 
+              <SubCommentList parentID={id}/>
               <div className="deleteBox">
                 <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
               </div>
