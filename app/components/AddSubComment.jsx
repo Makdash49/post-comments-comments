@@ -26,7 +26,7 @@ export class AddSubComment extends React.Component {
     return (
       <div className="container__footer">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" ref="text" placeholder="Add an item"/>
+          <input type="text" ref="text" placeholder="Add a comment"/>
           <button className="button expanded">Submit</button>
         </form>
       </div>
