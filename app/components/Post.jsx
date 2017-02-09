@@ -20,28 +20,32 @@ export class Post extends React.Component {
     var myComponent = () => {
       if (addPostComment) {
         return (
-          <div className="container">
-            <div className="title">
-              <h1>username</h1>
-              <h2>POST TITLE + CONTENT</h2>
-            </div>
-            <ItemList/>
-            <div className="button-box">
-              <AddItem/>
-              <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+          <div className="main-container">
+            <div className="container">
+              <div className="title">
+                <h1>username</h1>
+                <h2>POST TITLE + CONTENT</h2>
+              </div>
+              <ItemList/>
+              <div className="button-box">
+                <AddItem/>
+                <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+              </div>
             </div>
           </div>
         )
       } else {
         return (
-          <div className="container">
-            <div className="title">
-              <h1>username</h1>
-              <h2>POST TITLE + CONTENT</h2>
-            </div>
-            <ItemList/>
-            <div className="button-box">
-              <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+          <div className="main-container">
+            <div className="container">
+              <div className="title">
+                <h1>username</h1>
+                <h2>POST TITLE + CONTENT</h2>
+              </div>
+              <ItemList/>
+              <div className="button-box">
+                <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+              </div>
             </div>
           </div>
         )
