@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import moment from 'moment';
 import * as actions from 'actions';
+import AddSubComment from 'AddSubComment';
+
 
 export class Item extends React.Component {
 
@@ -32,20 +34,46 @@ export class Item extends React.Component {
   }
 
   render() {
-    var {text} = this.props;
+    var {text, addCommentForm} = this.props;
+
+    var myComponent = () => {
+      if (addCommentForm) {
+        return (
+          <div>
+            <div className="item">
+              <div className="content">
+                <p>username</p>
+                <p>{text}</p>
+              </div>
+
+              <AddSubComment/>
+              <div className="deleteBox">
+                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
+              </div>
+            </div>
+          </div>
+        )
+      } else {
+        return (
+          <div>
+            <div className="item">
+              <div className="content">
+                <p>username</p>
+                <p>{text}</p>
+              </div>
+
+              <div className="deleteBox">
+                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
+              </div>
+            </div>
+          </div>
+        )
+      }
+    }
 
     return (
       <div>
-        <div className="item">
-          <div className="content">
-            <p>username</p>
-            <p>{text}</p>
-          </div>
-
-          <div className="deleteBox">
-            <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
-          </div>
-        </div>
+        {myComponent()}
       </div>
     )
   }
