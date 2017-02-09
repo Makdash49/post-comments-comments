@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from 'actions';
 
 
-export class SubItem extends React.Component {
+export class AddSubComment extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
@@ -25,11 +25,11 @@ export class SubItem extends React.Component {
       <div className="container__footer">
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input type="text" ref="itemText" placeholder="Add an item"/>
-          <button className="button expanded">Add Item</button>
+          <button className="button expanded">Submit</button>
         </form>
       </div>
     );
   }
 };
 
-export default connect()(SubItem);
+export default connect()(AddSubComment);
