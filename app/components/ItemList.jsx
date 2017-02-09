@@ -5,7 +5,7 @@ import Item from 'Item';
 export class ItemList extends React.Component {
   render () {
     var {items} = this.props;
-    console.log('ITEMS:', items);
+    //console.log('ITEMS:', items);
 
     var renderItems = () => {
       return items.map((item) => {

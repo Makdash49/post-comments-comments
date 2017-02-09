@@ -73,6 +73,18 @@ export var subCommentsReducer = (state = [], action) => {
         ...state,
         subComment
       ];
+
+    case 'TOGGLE_COMMENT_FORM':
+      return state.map((item) => {
+        if (item.id === action.id) {
+          return {
+            ...item,
+            addCommentForm: !item.addCommentForm
+          };
+        } else {
+          return item;
+        }
+      });
     default:
       return state;
   };

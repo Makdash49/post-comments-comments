@@ -8,7 +8,7 @@ export class AddSubComment extends React.Component {
   handleSubmit (e) {
     e.preventDefault();
     var {dispatch, parentID} = this.props
-    console.log('PARENT_ID: ', parentID);
+    //console.log('PARENT_ID: ', parentID);
 
     var text = this.refs.text.value;
 

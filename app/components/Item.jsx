@@ -11,6 +11,7 @@ export class Item extends React.Component {
   handleToggleCommentForm (e) {
     e.preventDefault();
     var {dispatch, id} = this.props;
+    console.log('ID: ', id);
     dispatch(actions.toggleCommentForm(id));
   }
 
