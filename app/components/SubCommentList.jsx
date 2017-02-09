@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import Item from 'Item';
+import Item from 'Item';
 
 export class SubCommentList extends React.Component {
   render () {
@@ -23,15 +23,11 @@ export class SubCommentList extends React.Component {
 
       console.log('CURRENTSUBCOMMENTS: ', currentSubComments);
 
-      return "Working on it!"
-
-
-    //
-    //   return items.map((item) => {
-    //     return (
-    //       <Item key={item.id} {...item}/>
-    //     );
-    //   });
+      return currentSubComments.map((item) => {
+        return (
+          <Item key={item.id} {...item}/>
+        );
+      });
     };
 
     return (
