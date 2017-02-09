@@ -6,7 +6,7 @@ export var itemsReducer = (state = [], action) => {
     case 'ADD_ITEM':
     var item = {
       createdAt: moment().unix(),
-      editable: false,
+      addCommentForm: false,
       id: uuid(),
       text: action.text,
     }
@@ -21,12 +21,12 @@ export var itemsReducer = (state = [], action) => {
         };
       };
       return [...state];
-    case 'TOGGLE_EDITABLE':
+    case 'TOGGLE_COMMENT_FORM':
       return state.map((item) => {
         if (item.id === action.id) {
           return {
             ...item,
-            editable: !item.editable
+            addCommentForm: !item.addCommentForm
           };
         } else {
           return item;

@@ -5,17 +5,17 @@ import * as actions from 'actions';
 
 export class Item extends React.Component {
 
-  handleDelete (e) {
+  handleToggleCommentForm (e) {
     e.preventDefault();
     var {dispatch, id} = this.props;
-    dispatch(actions.deleteItem(id));
+    dispatch(actions.toggleCommentForm(id));
   }
 
-  handleEdit (e) {
-    e.preventDefault();
-    var {dispatch, id} = this.props;
-    dispatch(actions.toggleEditable(id));
-  }
+  // handleEdit (e) {
+  //   e.preventDefault();
+  //   var {dispatch, id} = this.props;
+  //   dispatch(actions.toggleEditable(id));
+  // }
 
   handleUpdateSubmit (e) {
     e.preventDefault();
@@ -43,7 +43,7 @@ export class Item extends React.Component {
           </div>
 
           <div className="deleteBox">
-            <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>Add</button>
+            <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
           </div>
         </div>
       </div>

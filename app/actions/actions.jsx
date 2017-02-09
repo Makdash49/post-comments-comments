@@ -33,3 +33,10 @@ export var openPostCommentForm = () => {
     type: 'OPEN_POST_COMMENT_FORM'
   }
 }
+
+export var toggleCommentForm = (id) => {
+  return {
+    type: 'TOGGLE_COMMENT_FORM',
+    id
+  }
+}
