@@ -27,12 +27,17 @@ export class Post extends React.Component {
             </div>
             <ItemList/>
             <AddItem/>
+            <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
           </div>
         )
       } else {
         return (
-          <div>
-            <h1>No Form</h1>
+          <div className="container">
+            <div className="title">
+              <h1>username</h1>
+              <h2>POST TITLE + CONTENT</h2>
+            </div>
+            <ItemList/>
             <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
           </div>
         )

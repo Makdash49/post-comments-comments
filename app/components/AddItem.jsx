@@ -14,6 +14,7 @@ export class AddItem extends React.Component {
     if (itemText.length > 0) {
       this.refs.itemText.value = '';
       dispatch(actions.addItem(itemText));
+      dispatch(actions.openPostCommentForm());
     } else {
       this.refs.itemText.focus();
     }
