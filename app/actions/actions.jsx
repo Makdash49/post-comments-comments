@@ -40,3 +40,11 @@ export var toggleCommentForm = (id) => {
     id
   }
 }
+
+export var createSubComment= (text, parentID) => {
+  return {
+    type: 'CREATE_SUB_COMMENT',
+    parentID,
+    text
+  }
+}

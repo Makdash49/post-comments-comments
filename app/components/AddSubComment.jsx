@@ -7,14 +7,16 @@ export class AddSubComment extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    var {dispatch} = this.props
+    var {dispatch, parentID} = this.props
+    console.log('PARENT_ID: ', parentID);
 
-    var itemText = this.refs.itemText.value;
+    var text = this.refs.text.value;
 
-    if (itemText.length > 0) {
-      this.refs.itemText.value = '';
-      dispatch(actions.addItem(itemText));
-      dispatch(actions.openPostCommentForm());
+    if (text.length > 0) {
+      this.refs.text.value = '';
+      dispatch(actions.createSubComment(text, parentID))
+      // dispatch(actions.addItem(itemText));
+      // dispatch(actions.openPostCommentForm());
     } else {
       this.refs.itemText.focus();
     }
@@ -24,7 +26,7 @@ export class AddSubComment extends React.Component {
     return (
       <div className="container__footer">
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" ref="itemText" placeholder="Add an item"/>
+          <input type="text" ref="text" placeholder="Add an item"/>
           <button className="button expanded">Submit</button>
         </form>
       </div>

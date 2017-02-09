@@ -57,3 +57,23 @@ export var addPostCommentReducer = (state = false, action) => {
       return state;
   }
 }
+
+
+export var subCommentsReducer = (state = [], action) => {
+  switch (action.type) {
+    case 'CREATE_SUB_COMMENT':
+    var subComment = {
+      createdAt: moment().unix(),
+      addCommentForm: false,
+      id: uuid(),
+      text: action.text,
+      parentID: action.parentID
+    }
+      return [
+        ...state,
+        subComment
+      ];
+    default:
+      return state;
+  };
+};

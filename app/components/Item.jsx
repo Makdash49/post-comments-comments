@@ -34,7 +34,7 @@ export class Item extends React.Component {
   }
 
   render() {
-    var {text, addCommentForm} = this.props;
+    var {text, addCommentForm, id} = this.props;
 
     var myComponent = () => {
       if (addCommentForm) {
@@ -46,7 +46,7 @@ export class Item extends React.Component {
                 <p>{text}</p>
               </div>
 
-              <AddSubComment/>
+              <AddSubComment parentID={id}/>
               <div className="deleteBox">
                 <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
               </div>
