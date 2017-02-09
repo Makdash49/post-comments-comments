@@ -27,3 +27,9 @@ export var editText = (id, itemText) => {
     itemText
   }
 }
+
+export var openPostCommentForm = () => {
+  return {
+    type: 'OPEN_POST_COMMENT_FORM'
+  }
+}

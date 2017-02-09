@@ -1,27 +1,47 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import AddItem from 'AddItem';
-import ItemList from 'ItemList'
+import ItemList from 'ItemList';
+import * as actions from 'actions';
+
 
 export class Post extends React.Component {
 
   handleAddComment (e) {
     e.preventDefault();
-    // var {dispatch, id} = this.props;
-    // dispatch(actions.deleteItem(id));
+    var {dispatch} = this.props;
+    dispatch(actions.openPostCommentForm());
   }
 
   render () {
 
+    var {addPostComment} = this.props;
+
+    var myComponent = () => {
+      if (addPostComment) {
+        return (
+          <div className="container">
+            <div className="title">
+              <h1>username</h1>
+              <h2>POST TITLE + CONTENT</h2>
+            </div>
+            <ItemList/>
+            <AddItem/>
+          </div>
+        )
+      } else {
+        return (
+          <div>
+            <h1>No Form</h1>
+            <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+          </div>
+        )
+      }
+    }
+
     return (
-      <div className="container">
-        <div className="title">
-          <h1>username</h1>
-          <h2>POST TITLE + CONTENT</h2>
-        </div>
-        <ItemList/>
-        <AddItem/>
-        <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+      <div>
+        {myComponent()}
       </div>
     )
   }

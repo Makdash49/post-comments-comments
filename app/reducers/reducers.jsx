@@ -47,3 +47,13 @@ export var itemsReducer = (state = [], action) => {
       return state;
   };
 };
+
+
+export var addPostCommentReducer = (state = false, action) => {
+  switch (action.type){
+    case 'OPEN_POST_COMMENT_FORM':
+      return !state;
+    default:
+      return state;
+  }
+}

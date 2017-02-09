@@ -32,45 +32,20 @@ export class Item extends React.Component {
   }
 
   render() {
-    var {text, createdAt, editable} = this.props;
-
-    var myComponent = () => {
-      if (editable) {
-        return (
-          <div className="item">
-
-            <div className="content">
-              <form onSubmit={this.handleUpdateSubmit.bind(this)}>
-                <input type="text" ref="itemText" defaultValue={text}/>
-              </form>
-            </div>
-
-            <div className="deleteBox">
-              <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
-              <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>E</button>
-            </div>
-
-          </div>
-        )
-      } else {
-        return (
-            <div className="item">
-              <div className="content">
-                <p>{text}</p>
-              </div>
-
-              <div className="deleteBox">
-                <button className="my-red-button float-right" onClick={this.handleDelete.bind(this)}>D</button>
-                <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>E</button>
-              </div>
-            </div>
-        )
-      }
-    }
+    var {text} = this.props;
 
     return (
       <div>
-        {myComponent()}
+        <div className="item">
+          <div className="content">
+            <p>username</p>
+            <p>{text}</p>
+          </div>
+
+          <div className="deleteBox">
+            <button className="my-green-button float-right" onClick={this.handleEdit.bind(this)}>Add</button>
+          </div>
+        </div>
       </div>
     )
   }

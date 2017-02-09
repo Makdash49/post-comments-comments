@@ -1,11 +1,12 @@
 import * as redux from 'redux';
 import thunk from 'redux-thunk';
 
-import {itemsReducer} from 'reducers';
+import {itemsReducer, addPostCommentReducer} from 'reducers';
 
 export var configure = (initialState = {}) => {
   var reducer = redux.combineReducers({
     items: itemsReducer,
+    addPostComment: addPostCommentReducer,
   });
 
 
