@@ -4,6 +4,13 @@ import {connect} from 'react-redux';
 // import ItemList from 'ItemList'
 
 export class Post extends React.Component {
+
+  handleAddComment (e) {
+    e.preventDefault();
+    // var {dispatch, id} = this.props;
+    // dispatch(actions.deleteItem(id));
+  }
+
   render () {
 
     return (
@@ -12,6 +19,7 @@ export class Post extends React.Component {
           <h1>username</h1>
           <h2>POST TITLE + CONTENT</h2>
         </div>
+        <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
       </div>
     )
   }
