@@ -26,8 +26,10 @@ export class Post extends React.Component {
               <h2>POST TITLE + CONTENT</h2>
             </div>
             <ItemList/>
-            <AddItem/>
-            <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+            <div className="button-box">
+              <AddItem/>
+              <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+            </div>
           </div>
         )
       } else {
@@ -38,7 +40,9 @@ export class Post extends React.Component {
               <h2>POST TITLE + CONTENT</h2>
             </div>
             <ItemList/>
-            <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+            <div className="button-box">
+              <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+            </div>
           </div>
         )
       }
@@ -60,3 +64,6 @@ export default connect(
 
 // What needs to happen?  I need to hit add comment and a form needs to appear.  We can do this with true or false. if AddPostComment === true
 // then render the component with a form.  Otherwise don't.
+
+// So now we have an items array.  What I also need is a commentComments array and they will have a parent id, and their own id.  Any commentComments
+// will have a place to list comments, where it will list comments with it's id.
