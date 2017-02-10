@@ -15,13 +15,6 @@ export var itemsReducer = (state = [], action) => {
         ...state,
         item
       ];
-    case 'DELETE_ITEM':
-      for (var i = 0; i < state.length; i++) {
-        if (state[i].id === action.id) {
-          state.splice(i, 1);
-        };
-      };
-      return [...state];
     case 'TOGGLE_COMMENT_FORM':
       return state.map((item) => {
         if (item.id === action.id) {
@@ -33,17 +26,6 @@ export var itemsReducer = (state = [], action) => {
           return item;
         }
       });
-    case 'EDIT_TEXT':
-      return state.map((item) => {
-        if (item.id === action.id) {
-          return {
-            ...item,
-            text: action.itemText
-          };
-        } else {
-          return item;
-        }
-      })
     default:
       return state;
   };
