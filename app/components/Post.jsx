@@ -25,10 +25,10 @@ export class Post extends React.Component {
               <div className="title">
                 <div className="just-text">
                   <div className="username">
-                    <h4>username</h4>
+                    <h4>beans4me</h4>
                   </div>
                   <div className="title-content">
-                    <h4>POST TITLE + CONTENT</h4>
+                    <h4>Beans! - Do you like them?</h4>
                   </div>
 
                   <AddItem/>
@@ -49,10 +49,10 @@ export class Post extends React.Component {
                 <div className="just-text">
 
                   <div className="username">
-                    <h4>username</h4>
+                    <h4>beans4me</h4>
                   </div>
                   <div className="title-content">
-                    <h4>POST TITLE + CONTENT</h4>
+                    <h4>Beans! - Do you like them?</h4>
                   </div>
 
 
