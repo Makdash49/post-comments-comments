@@ -9,10 +9,15 @@
   padding-bottom: 0%;
   background-color: white;
   height: auto;
+  overflow:hidden ; /* minds inside and outside floatting elements, fine if no size given */
+  display:block; /* or whatever else than inline */
+  clear:both;
 }
 
 .content {
-  width: 68%
+  width: auto;
+  border: 1px solid green;
+
 }
 
 .my-red-button {
@@ -38,6 +43,6 @@
   margin-bottom: 0%;
   float: right;
   padding: 1px;
-  float: right;
+  // float: right;
   width: 30%;
 }

@@ -24,7 +24,7 @@ export class Item extends React.Component {
   // handleUpdateSubmit (e) {
   //   e.preventDefault();
   //   var {dispatch, id} = this.props
-  // 
+  //
   //   var itemText = this.refs.itemText.value;
   //
   //   if (itemText.length > 0) {
@@ -45,15 +45,11 @@ export class Item extends React.Component {
         return (
           <div>
             <div className="item">
-              <div className="content">
-                <p>username</p>
-                <p>{text}</p>
-              </div>
+              <p>username</p>
+              <p>{text}</p>
               <SubCommentList parentID={id}/>
               <AddSubComment parentID={id}/>
-              <div className="deleteBox">
-                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
-              </div>
+              <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
             </div>
           </div>
         )
@@ -61,16 +57,12 @@ export class Item extends React.Component {
         return (
           <div>
             <div className="item">
-              <div className="content">
-                <p>username</p>
-                <p>{text}</p>
-              </div>
-
+              <p>username</p>
+              <p>{text}</p>
+              
               <SubCommentList parentID={id}/>
-              <div className="deleteBox">
-                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
+              <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
               </div>
-            </div>
           </div>
         )
       }

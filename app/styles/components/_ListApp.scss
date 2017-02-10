@@ -11,7 +11,7 @@
   padding-bottom: 2%;
   margin-bottom: 2rem;
   height: auto;
-  width: 100%;
+  width: auto;
   // width: 50%;
   // margin: 0 auto;
   margin-top: 5%;
@@ -22,14 +22,16 @@
 .button-box {
   width: 40em;
   border: 1px solid black;
-  height: 100px;
+  height: auto;
 }
 
 .title {
-  width: 40em;
+  border: 1px solid black;
+  width: auto;
+  height: auto;
   text-align: center;
   border: 1px solid black;
-
+  overflow:hidden
 }
 
 .form-list {
@@ -38,8 +40,15 @@
 }
 
 
-body {
-    // background-image: url("http://kingofwallpapers.com/soft-wallpapers/soft-wallpapers-013.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+// body {
+//     background-image: url("http://kingofwallpapers.com/soft-wallpapers/soft-wallpapers-013.jpg");
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+// }
+
+.just-text {
+  width: 100%;
+  float: left;
+  border: 1px solid black;
+
 }
