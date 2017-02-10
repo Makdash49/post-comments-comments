@@ -32,7 +32,9 @@ export class Post extends React.Component {
                   </div>
 
                   <AddItem/>
-                  <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+                  <div className="button-box">
+                    <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+                  </div>
                 </div>
                 <ItemList/>
               </div>
@@ -54,7 +56,9 @@ export class Post extends React.Component {
                   </div>
 
 
-                  <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+                  <div className="button-box">
+                    <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+                  </div>
                 </div>
                 <ItemList/>
               </div>
