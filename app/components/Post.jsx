@@ -26,9 +26,9 @@ export class Post extends React.Component {
                 <div className="just-text">
                   <h1>username</h1>
                   <h2>POST TITLE + CONTENT</h2>
+                  <AddItem/>
                 </div>
                 <ItemList/>
-                <AddItem/>
               </div>
               <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
             </div>
