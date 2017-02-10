@@ -7,6 +7,7 @@ export var itemsReducer = (state = [], action) => {
     var item = {
       createdAt: moment().unix(),
       addCommentForm: false,
+      depth: 1,
       id: uuid(),
       text: action.text,
     }
@@ -65,6 +66,7 @@ export var subCommentsReducer = (state = [], action) => {
     var subComment = {
       createdAt: moment().unix(),
       addCommentForm: false,
+      depth: action.parentDepth + 1,
       id: uuid(),
       text: action.text,
       parentID: action.parentID

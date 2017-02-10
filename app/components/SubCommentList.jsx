@@ -1,17 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Item from 'Item';
-// import SubComment from 'SubComment';
 
 export class SubCommentList extends React.Component {
   render () {
-    var {subComments, parentID} = this.props;
+    var {subComments, parentID, parentDepth} = this.props;
 
-    //console.log('SUBCOMMENTS: ', subComments);
-    //console.log('parentID:', parentID);
-
-    // //console.log('ITEMS:', items);
-    //console.log('THIS.PROPS: ', this.props);
 
     var myComponent = () => {
       var currentSubComments = [];
