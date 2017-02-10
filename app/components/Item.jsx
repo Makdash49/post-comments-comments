@@ -45,11 +45,13 @@ export class Item extends React.Component {
         return (
           <div>
             <div className="item">
-              <p>username</p>
-              <p>{text}</p>
-              <SubCommentList parentID={id}/>
-              <AddSubComment parentID={id}/>
-              <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
+              <div className="just-text">
+                <p>username</p>
+                <p>{text}</p>
+                <SubCommentList parentID={id}/>
+                <AddSubComment parentID={id}/>
+                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
+              </div>
             </div>
           </div>
         )
@@ -57,12 +59,13 @@ export class Item extends React.Component {
         return (
           <div>
             <div className="item">
-              <p>username</p>
-              <p>{text}</p>
-              
-              <SubCommentList parentID={id}/>
-              <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
+              <div className="just-text">
+                <p>username</p>
+                <p>{text}</p>
+                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
+                <SubCommentList parentID={id}/>
               </div>
+            </div>
           </div>
         )
       }
