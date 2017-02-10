@@ -59,9 +59,18 @@
 .username {
   float: left;
   margin: 1em;
+  width: 8em;
+
 }
 
 .title-content {
+  // border: 5px solid red;
   float: left;
   margin: 1em;
+  width: 50em;
+}
+
+.add-item-form {
+  margin-left: 3em;
+  width: 94%;
 }
