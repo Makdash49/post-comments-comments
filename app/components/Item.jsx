@@ -56,7 +56,9 @@ export class Item extends React.Component {
 
 
                 <AddSubComment parentID={id}/>
-                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add Comment</button>
+                <div className="button-box">
+                  <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add Comment</button>
+                </div>
               </div>
               <SubCommentList parentID={id}/>
             </div>
@@ -75,8 +77,9 @@ export class Item extends React.Component {
                   <p>{text}</p>
                 </div>
 
-
-                <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add Comment</button>
+                <div className="button-box">
+                  <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add Comment</button>
+                </div>
               </div>
               <SubCommentList parentID={id}/>
             </div>
