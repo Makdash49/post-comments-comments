@@ -27,10 +27,10 @@ export class Post extends React.Component {
                   <h1>username</h1>
                   <h2>POST TITLE + CONTENT</h2>
                   <AddItem/>
+                  <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
                 </div>
                 <ItemList/>
               </div>
-              <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
             </div>
           </div>
         )
@@ -42,10 +42,10 @@ export class Post extends React.Component {
                 <div className="just-text">
                   <h1>username</h1>
                   <h2>POST TITLE + CONTENT</h2>
+                  <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
                 </div>
                 <ItemList/>
               </div>
-              <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
             </div>
           </div>
         )
