@@ -46,8 +46,15 @@ export class Item extends React.Component {
           <div>
             <div className="item">
               <div className="just-text">
-                <p>username</p>
-                <p>{text}</p>
+
+                <div className="username">
+                  <p>username</p>
+                </div>
+                <div className="title-content">
+                  <p>{text}</p>
+                </div>
+
+
                 <AddSubComment parentID={id}/>
                 <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
               </div>
@@ -60,8 +67,15 @@ export class Item extends React.Component {
           <div>
             <div className="item">
               <div className="just-text">
-                <p>username</p>
-                <p>{text}</p>
+
+                <div className="username">
+                  <p>username</p>
+                </div>
+                <div className="title-content">
+                  <p>{text}</p>
+                </div>
+
+
                 <button className="my-green-button float-right" onClick={this.handleToggleCommentForm.bind(this)}>Add</button>
               </div>
               <SubCommentList parentID={id}/>

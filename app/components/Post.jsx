@@ -24,8 +24,13 @@ export class Post extends React.Component {
             <div className="container">
               <div className="title">
                 <div className="just-text">
-                  <h1>username</h1>
-                  <h2>POST TITLE + CONTENT</h2>
+                  <div className="username">
+                    <h4>username</h4>
+                  </div>
+                  <div className="title-content">
+                    <h4>POST TITLE + CONTENT</h4>
+                  </div>
+
                   <AddItem/>
                   <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
                 </div>
@@ -40,8 +45,15 @@ export class Post extends React.Component {
             <div className="container">
               <div className="title">
                 <div className="just-text">
-                  <h1>username</h1>
-                  <h2>POST TITLE + CONTENT</h2>
+
+                  <div className="username">
+                    <h4>username</h4>
+                  </div>
+                  <div className="title-content">
+                    <h4>POST TITLE + CONTENT</h4>
+                  </div>
+
+
                   <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
                 </div>
                 <ItemList/>
