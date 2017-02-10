@@ -20,44 +20,39 @@ export class Post extends React.Component {
     var myComponent = () => {
       if (addPostComment) {
         return (
-          <div className="main-container">
-            <div className="container">
-              <div className="title">
-                <div className="just-text">
-                  <div className="username">
-                    <h4>beans4me</h4>
-                  </div>
-                  <div className="title-content">
-                    <h4>Beans! - Do you like them?</h4>
-                  </div>
-
+          <div className="container">
+            <div className="title">
+              <div className="just-text">
+                <div className="username">
+                  <h4>beans4me</h4>
                 </div>
-                <ItemList/>
-                <div className="post-form">
-                  <AddItem/>
+                <div className="title-content">
+                  <h4>Beans! - Do you like them</h4>
                 </div>
-                <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
               </div>
+              <ItemList/>
             </div>
+              <div className="post-form">
+                <AddItem/>
+              </div>
+              <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
           </div>
         )
       } else {
         return (
-          <div className="main-container">
-            <div className="container">
-              <div className="title">
-                <div className="just-text">
+          <div className="container">
+            <div className="title">
+              <div className="just-text">
 
-                  <div className="username">
-                    <h4>beans4me</h4>
-                  </div>
-                  <div className="title-content">
-                    <h4>Beans! - Do you like them?</h4>
-                  </div>
+                <div className="username">
+                  <h4>beans4me</h4>
                 </div>
-                <ItemList/>
-                  <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
+                <div className="title-content">
+                  <h4>Beans! - Do you like them?</h4>
+                </div>
               </div>
+              <ItemList/>
+                <button className="my-green-button float-right" onClick={this.handleAddComment.bind(this)}>Add Comment</button>
             </div>
           </div>
         )
