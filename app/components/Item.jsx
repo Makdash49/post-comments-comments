@@ -42,6 +42,22 @@ export class Item extends React.Component {
             </div>
           </div>
         )
+      } else if (depth === 3 ){
+        return (
+          <div>
+            <div className="item">
+              <div className="just-text">
+
+                <div className="username">
+                  <p>username</p>
+                </div>
+                <div className="title-content">
+                  <p>{text}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
       } else {
         return (
           <div>
